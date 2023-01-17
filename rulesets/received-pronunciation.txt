@@ -1,0 +1,36 @@
+# NOTE: the CMU pronuncing dictionary has a number of Standard American mergers that are impossible to undo by rules alone. For this reason, until I can find a phonemic dictionary that preserves these mergers, this ruleset will be less accurate
+
+# "Unstressed syllabification of postvocalic nasals and liquids"
+# [+syl,stress=0][+son,+cons] -> Ø[+syl]
+
+"syllable-initial stop aspiration"
+[-cont,-voi,-son] -> [+sg] / $ _ [-syl]0[+syl,stress=(12)]
+
+"syllable final t glottalization"
+[t] -> [ʔ] / [+syl] _ $
+
+"pre-syllable final voiceless stop glottal stop epenthesis"
+Ø -> [ʔ] / [+syl] _ [-cont,-voi,-son]$
+
+"pre-voiceless vowel shortening"
+[+syl] -> [-long] / _ [-voi]
+
+"stop devoicing assimilation 1"
+[-cont,+voi,-son] -> [-voi] / [+cons,-voi] _
+"stop devoicing assimilation 2"
+[-cont,+voi,-son] -> [-voi] / _ [+cons,-voi]
+
+"rhotic diphthongization"
+[i][r]:b -> [ɪ][ə]
+[ʊ][r]:b -> [ʊ][ə]
+
+"non-rhoticity"
+[r] -> Ø / [+syl]:b _
+[ɚ] -> [ə]
+[ɝ] -> [ɜ]
+
+"nasalization of nð"
+[n][ð] -> [n̪][n̪]
+
+"stopping of 
+[ð] -> [d̪]

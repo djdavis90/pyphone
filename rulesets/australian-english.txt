@@ -1,0 +1,46 @@
+# NOTE: the CMU pronuncing dictionary has a number of Standard American mergers that are impossible to undo by rules alone. For this reason, until I can find a phonemic dictionary that preserves these mergers, this ruleset will be less accurate
+
+"t/d flapping"
+[+cor,-cont,-strid,-son] -> [ɾ] / {[+syl],[n]} _ [+syl,stress=0]
+# {[t],[d]} -> [ɾ] / [+syl]([r]) _ [+syl,stress=0]
+# NOTE: When possibilities matching in core/transformation is added, this rule can be changed to the commented one
+
+"rhotic diphthongization"
+[i][r]:b -> [ɪ][ə]
+[ʊ][r]:b -> [ʊ][ə]
+
+"non-rhoticity"
+[r] -> Ø / [+syl]:b _
+[ɚ] -> [ə]
+[ɝ] -> [ɜ]
+
+# General list of AU vowel sound changes
+[e]Ø -> [æ][ɪ]
+[ɑ] -> [a]
+[a][ɪ] -> [ɑ][ɪ]
+[ɛ] -> [e]
+[ɚ] -> [ə]
+[ʌ] -> [a]
+[u] -> [ʉ]
+[ɛ][r] -> [eː]Ø
+[ɝ] -> [ɜ]
+[ɑ][r] -> [a]Ø
+[o]Ø -> [ə][ʉ]
+[ɔ][ɪ] -> [o][ɪ]
+[ɔ] -> [o]
+[o][r] -> [o]Ø
+[ɪ][r] -> [ɪ][ə]
+[a][ʊ] -> [æ][ɔ]
+
+"intrusive r"
+Ø -> [r] / [+syl]$ _ [+syl]
+
+"l-velarization"
+[l] -> [ɫ] / [+syl]:b _
+
+"r-bunching"
+[r] -> [ɹ]
+
+# Other rules to be added once the pronunciation dictionary is generalized:
+#     yod-dropping
+#     wine-whine merger

@@ -1,0 +1,35 @@
+"Unstressed syllabification of postvocalic nasals and liquids"
+[+syl,stress=0]([m][n][ŋ][r][l]) -> Ø[+syl]
+
+"vowel lengthening"
+[+syl] -> [+long]
+# [əː] -> [ə]
+# TODO: Make this exclude schwa, and also fix the weird ATR symbol
+
+"pre-voiceless vowel shortening"
+[+syl] -> [-long] / _ [-voi]
+
+"/e/ diphthongization"
+[e]Ø -> [e][ɪ]
+# TODO: add dipthong marker or whatever
+
+"t/d flapping"
+[+cor,-cont,-strid,-son] -> [ɾ] / [+syl]([r]) _ [+syl,stress=0]
+# {[t],[d]} -> [ɾ] / [+syl]([r]) _ [+syl,stress=0]
+# NOTE: When possibilities matching in core/transformation is added, this rule can be changed to the commented one
+
+"syllable-initial stop aspiration"
+[-cont,-voi,-son] -> [+sg] / $ _ [-syl]0[+syl,stress=(12)]
+
+"intervocalic glottal stop insertion"
+Ø -> [ʔ] / [+syl,-ant]# _ [+syl]
+
+"pre-nasal raising of æ"
+Ø[æ] -> [ɛ][ə] / _ ([m][n])
+# TODO: fix the way schwa turns up as something weird
+
+"r bunching"
+[r] -> [ɹ]
+
+"post-vocalic l-velarization"
+[l] -> [ɫ] / [+syl]:b _
